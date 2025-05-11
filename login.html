@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - Кафе "Ага"</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Ага" class="logo-img">
+                        <span class="logo-text">Ага</span>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="delivery.html">Доставка</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="actions.html">Акции</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-contact">
+                    <div class="phone-info">
+                        <a href="tel:+71234567890" class="phone">+7 (123) 456-78-90</a>
+                        <div class="work-hours">
+                            <span>Приём заказов: 10:00-20:00</span>
+                            <span>Доставка: 10:00-21:00</span>
+                        </div>
+                    </div>
+                    <div class="user-actions">
+                        <a href="login.html" class="login-link active">
+                            <span>Войти</span>
+                        </a>
+                        <a href="cart.html" class="cart-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Корзина</span>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="auth-page">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Вход</button>
+                    <button class="auth-tab" data-tab="register">Регистрация</button>
+                </div>
+
+                <div class="auth-forms">
+                    <!-- Форма входа -->
+                    <form id="login-form" class="auth-form active">
+                        <h2>Вход в аккаунт</h2>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Пароль</label>
+                            <div class="password-input">
+                                <input type="password" id="password" name="password" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="admin-code" class="admin-code-label">Код администратора (опционально)</label>
+                            <input type="text" id="admin-code" name="admin-code">
+                        </div>
+                        <div class="form-group remember-me">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Запомнить меня</label>
+                        </div>
+                        <button type="submit" class="btn-primary">Войти</button>
+                        <div class="form-links">
+                            <a href="#" class="forgot-password">Забыли пароль?</a>
+                        </div>
+                    </form>
+
+                    <!-- Форма регистрации -->
+                    <form id="register-form" class="auth-form">
+                        <h2>Регистрация</h2>
+                        <div class="form-group">
+                            <label for="register-name">Ваше имя</label>
+                            <input type="text" id="register-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-phone">Номер телефона</label>
+                            <input type="tel" id="register-phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-password">Пароль</label>
+                            <div class="password-input">
+                                <input type="password" id="register-password" name="password" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Подтверждение пароля</label>
+                            <div class="password-input">
+                                <input type="password" id="confirm-password" name="confirm-password" required>
+                                <button type="button" class="toggle-password">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group terms">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">Я согласен с <a href="#">правилами использования</a> и <a href="#">политикой конфиденциальности</a></label>
+                        </div>
+                        <button type="submit" class="btn-primary">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="actions.html">Акции</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Контакты</h3>
+                    <p>Телефон: <a href="tel:+71234567890">+7 (123) 456-78-90</a></p>
+                    <p>Адрес: г. Новосибирск, мкр. Горский, д. 51</p>
+                    <p>Email: info@aga-cafe.ru</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Следите за нами</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Кафе "Ага". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html> 

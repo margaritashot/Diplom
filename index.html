@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ага - Кафе национальной кухни</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Ага" class="logo-img">
+                        <span class="logo-text">Ага</span>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Главная</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="delivery.html">Доставка</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="actions.html">Акции</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-contact">
+                    <div class="phone-info">
+                        <a href="tel:+71234567890" class="phone">+7 (123) 456-78-90</a>
+                        <div class="work-hours">
+                            <span>Приём заказов: 10:00-20:00</span>
+                            <span>Доставка: 10:00-21:00</span>
+                        </div>
+                    </div>
+                    <div class="user-actions">
+                        <a href="login.html" class="login-link">
+                            <span>Войти</span>
+                        </a>
+                        <a href="cart.html" class="cart-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Корзина</span>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <div class="container">
+                <h1>Добро пожаловать в кафе "Ага"</h1>
+                <p class="welcome-text">Вкусная еда и уютная атмосфера</p>
+            </div>
+        </section>
+
+        <section class="banner-slider">
+            <div class="slider-container">
+                <div class="slide active">
+                    <div class="slide-image">
+                        <img src="images/banner1.jpg" alt="Баннер 1">
+                    </div>
+                    <div class="slide-content">
+                        <h2>Огромный сет всего за 3000₽</h2>
+                        <p>Аппетитный сет для всей семьи</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-image">
+                        <img src="images/banner2.jpg" alt="Баннер 2">
+                    </div>
+                    <div class="slide-content">
+                        <h2>Специальные предложения</h2>
+                        <p>Уникальные блюда по выгодным ценам</p>
+                    </div>
+                </div>
+                <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="food-categories">
+            <div class="container">
+                <h2>Наше меню</h2>
+                <div class="categories-grid">
+                    <a href="menu.html#buuzy" class="category-card">
+                        <div class="category-image">
+                            <img src="images/buuzy.jpg" alt="Буузы">
+                        </div>
+                        <h3>Буузы</h3>
+                        <p>Традиционное бурятское блюдо</p>
+                    </a>
+                    <a href="menu.html#first" class="category-card">
+                        <div class="category-image">
+                            <img src="images/soups.jpg" alt="Первые блюда">
+                        </div>
+                        <h3>Первые блюда</h3>
+                        <p>Супы и бульоны</p>
+                    </a>
+                    <a href="menu.html#second" class="category-card">
+                        <div class="category-image">
+                            <img src="images/main.jpg" alt="Вторые блюда">
+                        </div>
+                        <h3>Вторые блюда</h3>
+                        <p>Горячие блюда</p>
+                    </a>
+                    <a href="menu.html#drinks" class="category-card">
+                        <div class="category-image">
+                            <img src="images/drinks.jpg" alt="Напитки">
+                        </div>
+                        <h3>Напитки</h3>
+                        <p>Прохладительные напитки</p>
+                    </a>
+                    <a href="menu.html#salads" class="category-card">
+                        <div class="category-image">
+                            <img src="images/salads.jpg" alt="Салаты">
+                        </div>
+                        <h3>Салаты</h3>
+                        <p>Свежие салаты</p>
+                    </a>
+                    <a href="menu.html#bakery" class="category-card">
+                        <div class="category-image">
+                            <img src="images/bakery.jpg" alt="Выпечка">
+                        </div>
+                        <h3>Выпечка</h3>
+                        <p>Выпечка и десерты</p>
+                    </a>
+                    <a href="menu.html#sauces" class="category-card">
+                        <div class="category-image">
+                            <img src="images/sauces.jpg" alt="Соусы">
+                        </div>
+                        <h3>Соусы</h3>
+                        <p>Соусы к блюдам</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="actions.html">Акции</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Контакты</h3>
+                    <p>Телефон: <a href="tel:+71234567890">+7 (123) 456-78-90</a></p>
+                    <p>Адрес: г. Новосибирск, мкр. Горский, д. 51</p>
+                    <p>Email: info@aga-cafe.ru</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Следите за нами</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Кафе "Ага". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html> 

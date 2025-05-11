@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню - Кафе "Ага"</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Ага" class="logo-img">
+                        <span class="logo-text">Ага</span>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="menu.html" class="active">Меню</a></li>
+                        <li><a href="delivery.html">Доставка</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="actions.html">Акции</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-contact">
+                    <div class="phone-info">
+                        <a href="tel:+71234567890" class="phone">+7 (123) 456-78-90</a>
+                        <div class="work-hours">
+                            <span>Приём заказов: 10:00-20:00</span>
+                            <span>Доставка: 10:00-21:00</span>
+                        </div>
+                    </div>
+                    <div class="user-actions">
+                        <a href="login.html" class="login-link">
+                            <span>Войти</span>
+                        </a>
+                        <a href="cart.html" class="cart-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Корзина</span>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="menu-page">
+        <div class="menu-nav">
+            <div class="container">
+                <nav class="categories-nav">
+                    <a href="#buuzy" class="category-link">Буузы</a>
+                    <a href="#first" class="category-link">Первые блюда</a>
+                    <a href="#second" class="category-link">Вторые блюда</a>
+                    <a href="#drinks" class="category-link">Напитки</a>
+                    <a href="#salads" class="category-link">Салаты</a>
+                    <a href="#sauces" class="category-link">Соусы</a>
+                    <a href="#bakery" class="category-link">Выпечка</a>
+                </nav>
+            </div>
+        </div>
+
+        <section id="buuzy" class="menu-section">
+            <div class="container">
+                <h2>Буузы</h2>
+                <div class="dishes-grid">
+                    <div class="dish-card" data-id="buuza1">
+                        <div class="dish-image">
+                            <img src="images/bb.png" alt="Бууза">
+                        </div>
+                        <div class="dish-info">
+                            <h3>Бууза классическая</h3>
+                            <p class="dish-description">Фарш из говядины, свинины, лук, чеснок, специи</p>
+                            <div class="dish-footer">
+                                <span class="price">70 ₽</span>
+                                <button class="add-to-cart" 
+                                        data-id="buuza1" 
+                                        data-name="Бууза классическая" 
+                                        data-price="70" 
+                                        data-image="images/bb.png">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                                       <div class="dish-card" data-id="buuza1">
+                        <div class="dish-image">
+                            <img src="images/syr.jpg" alt="Бууза">
+                        </div>
+                        <div class="dish-info">
+                            <h3>Буузы свежеслепленные</h3>
+                            <p class="dish-description">Буузы, слепленные вручную</p>
+                            <div class="dish-footer">
+                                <span class="price">60 ₽</span>
+                                <button class="add-to-cart" 
+                                        data-id="buuza1" 
+                                        data-name="Буузы свежеслепленные" 
+                                        data-price="60" 
+                                        data-image="images/syr.jpg">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="buuza1">
+                        <div class="dish-image">
+                            <img src="images/zam.jpg" alt="Бууза">
+                        </div>
+                        <div class="dish-info">
+                            <h3>Буузы замороженные</h3>
+                            <p class="dish-description">Буузы, замороженные в течение 24 часов</p>
+                            <div class="dish-footer">
+                                <span class="price">60 ₽</span>
+                                <button class="add-to-cart" 
+                                        data-id="buuza1" 
+                                        data-name="Буузы замороженные" 
+                                        data-price="60" 
+                                        data-image="images/zam.jpg">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="buuza1">
+                        <div class="dish-image">
+                            <img src="images/zhar.jpg" alt="Бууза">
+                        </div>
+                        <div class="dish-info">
+                            <h3>Буузы жареные</h3>
+                            <p class="dish-description">Буузы, жареные в кляре </p>
+                            <div class="dish-footer">
+                                <span class="price">60 ₽</span>
+                                <button class="add-to-cart" 
+                                        data-id="buuza1" 
+                                        data-name="Буузы жареные" 
+                                        data-price="60" 
+                                        data-image="images/zhar.jpg">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div><!-- Другие буузы -->
+                </div>
+            </div>
+        </section>
+
+        <section id="first" class="menu-section">
+            <div class="container">
+                <h2>Первые блюда</h2>
+                <div class="dishes-grid">
+                    <div class="dish-card" data-id="first">
+                        <div class="dish-image">
+                            <img src="images/soups.jpg" alt="Soup">
+                        </div>
+                        <div class="dish-info">
+                            <h3>Бухлеор</h3>
+                            <p class="dish-description">Цельные куски мяса, картошка и наваристый бульон</p>
+                            <div class="dish-footer">
+                                <span class="price">300 ₽</span>
+                                <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dishes-grid">
+                        <div class="dish-card" data-id="first">
+                            <div class="dish-image">
+                                <img src="images/sol.jpg" alt="Soup">
+                            </div>
+                            <div class="dish-info">
+                                <h3>Солянка</h3>
+                                <p class="dish-description">копченная колбаса, картофель, соленые огурцы морковь, лук, лимон и маслины</p>
+                                <div class="dish-footer">
+                                    <span class="price">190 ₽</span>
+                                    <button class="add-to-cart">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="first">
+                        <div class="dish-image">
+                             <img src="images/borsh.jpg" alt="Soup">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Борщ</h3>
+                            <p class="dish-description">говядина, свекла, лук, капуста, морковь, картофель</p>
+                            <div class="dish-footer">
+                                 <span class="price">180 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="dish-card" data-id="first">
+                        <div class="dish-image">
+                             <img src="images/shulen.jpg" alt="Soup">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Шулэн</h3>
+                            <p class="dish-description">говядина, лапша, зелень</p>
+                            <div class="dish-footer">
+                                 <span class="price">190 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dish-card" data-id="first">
+                        <div class="dish-image">
+                             <img src="images/bansh.jpg" alt="Soup">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Баншатай шулэн</h3>
+                            <p class="dish-description">говядина, лапша, пельмени, зелень</p>
+                            <div class="dish-footer">
+                                 <span class="price">210 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="first">
+                        <div class="dish-image">
+                             <img src="images/lag.jpg" alt="Soup">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Лагман</h3>
+                            <p class="dish-description">говядина, лапша, картофель, болгарский перец, морковь, лук, зелень</p>
+                            <div class="dish-footer">
+                                 <span class="price">200 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div><!-- Первые блюда -->
+                </div>
+            </div>
+        </section>
+
+        <section id="second" class="menu-section">
+            <div class="container">
+                <h2>Вторые блюда</h2>
+                <div class="dishes-grid">
+                    <div class="dish-card" data-id="second">
+                        <div class="dish-image">
+                             <img src="images/plov.jpg" alt="Second">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Плов</h3>
+                            <p class="dish-description">говядина, рис, морковь, лук, салат</p>
+                            <div class="dish-footer">
+                                 <span class="price">200 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="second">
+                        <div class="dish-image">
+                             <img src="images/zuivan.jpg" alt="Second">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Цуйван</h3>
+                            <p class="dish-description">говядина, лапша, морковь, лук, салат</p>
+                            <div class="dish-footer">
+                                 <span class="price">190 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="second">
+                        <div class="dish-image">
+                             <img src="images/kotl.jpg" alt="Second">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Котлета с пюре</h3>
+                            <p class="dish-description">фарш говядина/свинина, картофельное пюре</p>
+                            <div class="dish-footer">
+                                 <span class="price">210 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="second">
+                        <div class="dish-image">
+                             <img src="images/gul.jpg" alt="Second">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Гуляш</h3>
+                            <p class="dish-description">говядина и свинина, морковь, лук</p>
+                            <div class="dish-footer">
+                                 <span class="price">180 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="second">
+                        <div class="dish-image">
+                             <img src="images/pelmen.jpg" alt="Second">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Жаренные пельмени</h3>
+                            <p class="dish-description">домашние пельмени, жареные в кляре</p>
+                            <div class="dish-footer">
+                                 <span class="price">200 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="second">
+                        <div class="dish-image">
+                             <img src="images/kur.jpg" alt="Second">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Курица с рисом</h3>
+                            <p class="dish-description">Курица в сливочном соусе с рисом и овощами</p>
+                            <div class="dish-footer">
+                                 <span class="price">200 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="second">
+                        <div class="dish-image">
+                             <img src="images/spag.jpg" alt="Second">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Спагетт Карбонара</h3>
+                            <p class="dish-description">Сливочная карбонара с курицей, грибами и сыром</p>
+                            <div class="dish-footer">
+                                 <span class="price">180 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="second">
+                        <div class="dish-image">
+                             <img src="images/kriloshki.jpg" alt="Second">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Куриные крылышки</h3>
+                            <p class="dish-description">Куриные крылышки с картофелем фри и салат капустный</p>
+                            <div class="dish-footer">
+                                 <span class="price">250 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div><!-- Вторые блюда -->
+                </div>
+            </div>
+        </section>
+
+        <section id="drinks" class="menu-section">
+            <div class="container">
+                <h2>Напитки</h2>
+                <div class="dishes-grid">
+                    <div class="dish-card" data-id="drinks">
+                        <div class="dish-image">
+                             <img src="images/drinks.jpg" alt="drinks">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Чай с молоком</h3>
+                            <p class="dish-description">Черный/зеленый чай с молоком</p>
+                            <div class="dish-footer">
+                                 <span class="price">40 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="drinks">
+                        <div class="dish-image">
+                             <img src="images/sau.jpg" alt="drinks">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Зеленый чай</h3>
+                            <p class="dish-description">Травяной зеленый чай</p>
+                            <div class="dish-footer">
+                                 <span class="price">35 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="drinks">
+                        <div class="dish-image">
+                             <img src="images/sauch.jpg" alt="drinks">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Черный чай</h3>
+                            <p class="dish-description">Травяной черный чай</p>
+                            <div class="dish-footer">
+                                 <span class="price">35 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="drinks">
+                        <div class="dish-image">
+                             <img src="images/limon.jpg" alt="drinks">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Чай с лимоном</h3>
+                            <p class="dish-description">Черный/зеленый чай с лимоном</p>
+                            <div class="dish-footer">
+                                 <span class="price">40 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="drinks">
+                        <div class="dish-image">
+                             <img src="images/komp.jpg" alt="drinks">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Компот</h3>
+                            <p class="dish-description">Компот из сухофруктов сладкий</p>
+                            <div class="dish-footer">
+                                 <span class="price">40 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="drinks">
+                        <div class="dish-image">
+                             <img src="images/kok.jpg" alt="drinks">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Коктейль</h3>
+                            <p class="dish-description">Молочный коктейль из клубники и банана</p>
+                            <div class="dish-footer">
+                                 <span class="price">55 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="drinks">
+                        <div class="dish-image">
+                             <img src="images/kofe.jpg" alt="drinks">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Кофе "Латте"</h3>
+                            <p class="dish-description">Кофе "Латте" со сливками</p>
+                            <div class="dish-footer">
+                                 <span class="price">55 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div><!-- Напитки -->
+                </div>
+            </div>
+        </section>
+
+        <section id="salads" class="menu-section">
+            <div class="container">
+                <h2>Салаты</h2>
+                <div class="dishes-grid">
+                    <div class="dish-card" data-id="salads">
+                        <div class="dish-image">
+                             <img src="images/chvetochnay.jpg" alt="salads">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Цветочная поляна</h3>
+                            <p class="dish-description">Курица ,картофель, морковь, опята, сыр, майонез</p>
+                            <div class="dish-footer">
+                                 <span class="price">100 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="salads">
+                        <div class="dish-image">
+                             <img src="images/tayga.jpg" alt="salads">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Таежный</h3>
+                            <p class="dish-description">Говядина, картофель, свежие огурцы, яйца, шампиньоны, майонез</p>
+                            <div class="dish-footer">
+                                 <span class="price">130 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="salads">
+                        <div class="dish-image">
+                             <img src="images/zezar.jpg" alt="salads">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Цезарь</h3>
+                            <p class="dish-description">Курица, пекинская капуста, гренки, соус тар-тар, сыр</p>
+                            <div class="dish-footer">
+                                 <span class="price">120 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="salads">
+                        <div class="dish-image">
+                             <img src="images/grech.jpg" alt="salads">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Греческий</h3>
+                            <p class="dish-description">Черри, огурцы, пекинская капуста, болгарский перец, оливковое масло</p>
+                            <div class="dish-footer">
+                                 <span class="price">130 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="salads">
+                        <div class="dish-image">
+                             <img src="images/mork.jpg" alt="salads">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Морковь по-корейски</h3>
+                            <p class="dish-description">Натертая морковь, заправленная чим-чим</p>
+                            <div class="dish-footer">
+                                 <span class="price">100 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="salads">
+                        <div class="dish-image">
+                             <img src="images/ovosh.jpg" alt="salads">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Овощной</h3>
+                            <p class="dish-description">Капуста, огурцы и помидоры</p>
+                            <div class="dish-footer">
+                                 <span class="price">100 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div><!-- Салаты -->
+                </div>
+            </div>
+        </section>
+
+        <section id="sauces" class="menu-section">
+            <div class="container">
+                <h2>Соусы</h2>
+                <div class="dishes-grid">
+                    <div class="dish-card" data-id="sauces">
+                        <div class="dish-image">
+                             <img src="images/ketchup.jpg" alt="sauces">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Кетчуп</h3>
+                            <p class="dish-description"></p>
+                            <div class="dish-footer">
+                                 <span class="price">20 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="sauces">
+                        <div class="dish-image">
+                             <img src="images/mazik.jpg" alt="sauces">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Майонез</h3>
+                            <p class="dish-description"></p>
+                            <div class="dish-footer">
+                                 <span class="price">20 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="sauces">
+                        <div class="dish-image">
+                             <img src="images/smet.jpg" alt="sauces">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Сметана</h3>
+                            <p class="dish-description"></p>
+                            <div class="dish-footer">
+                                 <span class="price">20 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>                    <div class="dish-card" data-id="sauces">
+                        <div class="dish-image">
+                             <img src="images/tar.jpg" alt="sauces">
+                        </div>
+                        <div class="dish-info">
+                              <h3>Тар-тар</h3>
+                            <p class="dish-description"></p>
+                            <div class="dish-footer">
+                                 <span class="price">30 ₽</span>
+                                 <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div><!-- Соусы -->
+                </div>
+            </div>
+        </section>
+
+        <section id="bakery" class="menu-section">
+            <div class="container">
+                <h2>Выпечка</h2>
+                <div class="dishes-grid">
+                    <div class="dish-card" data-id="bakery1">
+                        <div class="dish-image">
+                            <img src="images/bakery.jpg" alt="Пирожки">
+                        </div>
+                        <div class="dish-info">
+                            <h3>Боовы со сгущенкой</h3>
+                            <p class="dish-description">Сладкий хворост с сгущенкой</p>
+                            <div class="dish-footer">
+                                <span class="price">50 ₽</span>
+                                <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="bakery2">
+                        <div class="dish-image">
+                            <img src="images/cheb.jpg" alt="Чебурек">
+                        </div>
+                        <div class="dish-info">
+                            <h3>Чебурек</h3>
+                            <p class="dish-description">Хрустящие чебуреки с мясной начинкой</p>
+                            <div class="dish-footer">
+                                <span class="price">120 ₽</span>
+                                <button class="add-to-cart" 
+                                        data-id="bakery2" 
+                                        data-name="Чебурек" 
+                                        data-price="120" 
+                                        data-image="images/cheb.jpg">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="bakery3">
+                        <div class="dish-image">
+                            <img src="images/sos.jpg" alt="Сосиска в тесте">
+                        </div>
+                        <div class="dish-info">
+                            <h3>Сосиска в тесте</h3>
+                            <p class="dish-description">Свежая выпечка с сосиской</p>
+                            <div class="dish-footer">
+                                <span class="price">80 ₽</span>
+                                <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="bakery4">
+                        <div class="dish-image">
+                            <img src="images/sams.jpg" alt="Самса">
+                        </div>
+                        <div class="dish-info">
+                            <h3>Самса</h3>
+                            <p class="dish-description">Самса с курицей</p>
+                            <div class="dish-footer">
+                                <span class="price">80 ₽</span>
+                                <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="bakery5">
+                        <div class="dish-image">
+                            <img src="images/blin.jpg" alt="Блины">
+                        </div>
+                        <div class="dish-info">
+                            <h3>Блины со сгущенкой</h3>
+                            <p class="dish-description">Два блинчика со сгущенкой</p>
+                            <div class="dish-footer">
+                                <span class="price">60 ₽</span>
+                                <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-card" data-id="bakery6">
+                        <div class="dish-image">
+                            <img src="images/urme.jpg" alt="Урмэ">
+                        </div>
+                        <div class="dish-info">
+                            <h3>Урмэ</h3>
+                            <p class="dish-description">Черемуховый десерт</p>
+                            <div class="dish-footer">
+                                <span class="price">120 ₽</span>
+                                <button class="add-to-cart" 
+                                        data-id="bakery6" 
+                                        data-name="Урмэ" 
+                                        data-price="120" 
+                                        data-image="images/urme.jpg">
+                                    В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="actions.html">Акции</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Контакты</h3>
+                    <p>Телефон: <a href="tel:+71234567890">+7 (123) 456-78-90</a></p>
+                    <p>Адрес: г. Новосибирск, мкр. Горский, д. 51</p>
+                    <p>Email: info@aga-cafe.ru</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Следите за нами</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Кафе "Ага". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html> 

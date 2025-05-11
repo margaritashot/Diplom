@@ -1,0 +1,130 @@
+/* Общие стили */
+body {
+  background-color: #f8f9fa;
+}
+
+/* Стили для карточек блюд */
+.card {
+  transition: transform 0.2s;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Стили для навигации */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Стили для форм */
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Стили для кнопок */
+.btn {
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Стили для таблиц */
+.table {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table thead th {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* Стили для модальных окон */
+.modal-content {
+  border-radius: 8px;
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Стили для алертов */
+.alert {
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* Стили для страницы меню */
+.menu-category {
+  margin-bottom: 2rem;
+}
+
+.menu-category h3 {
+  color: #343a40;
+  margin-bottom: 1rem;
+}
+
+/* Стили для корзины */
+.cart-item {
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Стили для отзывов */
+.review-card {
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.review-rating {
+  color: #ffc107;
+}
+
+/* Стили для админ-панели */
+.admin-tabs {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 150px;
+  }
+  
+  .table-responsive {
+    margin-bottom: 1rem;
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+} 

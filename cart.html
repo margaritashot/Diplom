@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Кафе национальной кухни "Ага"</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Ага" class="logo-img">
+                        <span class="logo-text">Ага</span>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="delivery.html">Доставка</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="actions.html">Акции</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-contact">
+                    <div class="phone-info">
+                        <a href="tel:+71234567890" class="phone">+7 (123) 456-78-90</a>
+                        <div class="work-hours">
+                            <span>Приём заказов: 10:00-20:00</span>
+                            <span>Доставка: 10:00-21:00</span>
+                        </div>
+                    </div>
+                    <div class="user-actions">
+                        <a href="login.html" class="login-link">
+                            <span>Войти</span>
+                        </a>
+                        <a href="cart.html" class="cart-link active">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Корзина</span>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="cart-page">
+        <div class="container">
+            <h1>Корзина</h1>
+            
+            <div class="cart-content">
+                <div class="cart-items" id="cartItems">
+                    <!-- Товары будут добавляться динамически -->
+                </div>
+                
+                <div class="cart-summary">
+                    <h2>Итого</h2>
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Товаров:</span>
+                            <span id="totalItems">0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Сумма:</span>
+                            <span id="totalPrice">0 ₽</span>
+                        </div>
+                    </div>
+                    <button class="checkout-btn">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="actions.html">Акции</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Контакты</h3>
+                    <p>Телефон: <a href="tel:+71234567890">+7 (123) 456-78-90</a></p>
+                    <p>Адрес: г. Новосибирск, мкр. Горский, д. 51</p>
+                    <p>Email: info@aga-cafe.ru</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Следите за нами</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Кафе "Ага". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html> 

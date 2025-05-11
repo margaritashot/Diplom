@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Кафе национальной кухни "Ага"</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Ага" class="logo-img">
+                        <span class="logo-text">Ага</span>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="delivery.html">Доставка</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="actions.html">Акции</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html" class="active">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-contact">
+                    <div class="phone-info">
+                        <a href="tel:+71234567890" class="phone">+7 (123) 456-78-90</a>
+                        <div class="work-hours">
+                            <span>Приём заказов: 10:00-20:00</span>
+                            <span>Доставка: 10:00-21:00</span>
+                        </div>
+                    </div>
+                    <div class="user-actions">
+                        <a href="login.html" class="login-link">
+                            <span>Войти</span>
+                        </a>
+                        <a href="cart.html" class="cart-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Корзина</span>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contacts-section">
+            <div class="container">
+                <h1>Контакты</h1>
+                <div class="contacts-content">
+                    <div class="contacts-info">
+                        <div class="contact-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Адрес</h3>
+                            <p>г. Новосибирск, мкр. Горский, д. 51</p>
+                            <p>Ближайшее метро: Студенческая (10 минут пешком)</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-phone"></i>
+                            <h3>Телефон</h3>
+                            <p><a href="tel:+71234567890">+7 (123) 456-78-90</a></p>
+                            <p>Для заказов и бронирования</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@aga-cafe.ru">info@aga-cafe.ru</a></p>
+                            <p>Для вопросов и предложений</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-clock"></i>
+                            <h3>Режим работы</h3>
+                            <p>Понедельник - Пятница: 10:00 - 21:00</p>
+                            <p>Суббота - Воскресенье: 10:00 - 22:00</p>
+                            <p>Кухня работает до 21:00</p>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <div id="map" class="map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Навигация</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="actions.html">Акции</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Контакты</h3>
+                    <p>Телефон: <a href="tel:+71234567890">+7 (123) 456-78-90</a></p>
+                    <p>Адрес: г. Новосибирск, мкр. Горский, д. 51</p>
+                    <p>Email: info@aga-cafe.ru</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Следите за нами</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Кафе "Ага". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_API_ключ&lang=ru_RU" type="text/javascript"></script>
+    <script>
+        ymaps.ready(init);
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [54.995001, 82.901055], // Координаты Новосибирска, мкр. Горский
+                zoom: 16
+            });
+            
+            var myPlacemark = new ymaps.Placemark([54.995001, 82.901055], {
+                balloonContent: 'Кафе "Ага"<br>мкр. Горский, д. 51'
+            }, {
+                preset: 'islands#redFoodIcon'
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+</body>
+</html> 

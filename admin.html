@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель - Кафе "Ага"</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Ага" class="logo-img">
+                        <span class="logo-text">Ага</span>
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="delivery.html">Доставка</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="actions.html">Акции</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header-contact">
+                    <div class="user-actions">
+                        <a href="#" class="logout-link">
+                            <span>Выйти</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-page">
+        <div class="container">
+            <h1 class="admin-title">Админ-панель</h1>
+            
+            <div class="admin-sections">
+                <!-- Раздел заказов -->
+                <section class="admin-section" id="orders">
+                    <h2>Управление заказами</h2>
+                    <div class="orders-filters">
+                        <select id="orderStatus">
+                            <option value="all">Все заказы</option>
+                            <option value="new">Новые</option>
+                            <option value="processing">В обработке</option>
+                            <option value="delivery">Доставка</option>
+                            <option value="completed">Завершенные</option>
+                            <option value="cancelled">Отмененные</option>
+                        </select>
+                        <input type="date" id="orderDate">
+                        <button class="btn-primary btn-narrow" id="applyFilters">Применить фильтры</button>
+                    </div>
+                    <div class="orders-stats">
+                        <div class="stat-card">
+                            <h3>Новые заказы</h3>
+                            <span id="newOrdersCount">1</span>
+                        </div>
+                        <div class="stat-card">
+                            <h3>В обработке</h3>
+                            <span id="processingOrdersCount">0</span>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Доставка</h3>
+                            <span id="deliveryOrdersCount">0</span>
+                        </div>
+                    </div>
+                    <div class="orders-list" id="ordersList">                        <div class="order-card">
+                            <h3>Номер заказа: 25</h3>
+                            <div class="order-info">
+                                Дата оформления: 09.06.2024, 10:15:00<br>
+                                Пункт выдачи: ЦУМ Якутск; Улица Курашова, 4; 4 этаж;
+                            </div>
+                            <span class="order-status">Статус заказа: <span class="status-value">новый</span></span>
+                            <div class="order-actions">
+                                <button class="btn-status"><i class="fas fa-sync-alt"></i> Поменять статус заказа</button>
+                                <button class="btn-view"><i class="fas fa-eye"></i> Просмотреть</button>
+                            </div>
+                        </div>
+                        <!-- Остальные заказы будут подгружаться динамически -->
+                    </div>
+                </section>
+                <!-- Раздел меню -->
+                <section class="admin-section" id="menu">
+                    <h2>Управление меню</h2>
+                    <div class="menu-actions">
+                        <button class="btn-primary" id="addDishBtn">Добавить блюдо</button>
+                    </div>
+                    <div class="menu-actions">
+                        <button class="btn-primary" id="addDishBtn">Редактировать блюдо</button>
+                    </div>
+                    <div class="menu-actions">
+                        <button class="btn-primary" id="addDishBtn">Удалить блюдо</button>
+                    </div>
+                    </div>
+                </section>
+                <!-- Раздел акций -->
+                <section class="admin-section" id="promotions">
+                    <h2>Управление акциями</h2>
+                    <div class="promotions-actions">
+                        <button class="btn-primary" id="addPromotion">Добавить акцию</button>
+                    </div>
+
+                    <div class="promotions-actions">
+                        <button class="btn-primary" id="addPromotion">Редактировать акцию</button>
+                    </div>
+
+                    <div class="promotions-actions">
+                        <button class="btn-primary" id="addPromotion">Удалить акцию</button>
+                    </div>
+                    <div class="promotions-list">
+                    </div>
+                </section>
+
+                <!-- Раздел отзывов -->
+                <section class="admin-section" id="reviews">
+                    <h2>Управление отзывами</h2>
+                    <div class="reviews-filters">
+                        <select id="reviewStatus">
+                            <option value="all">Все отзывы</option>
+                            <option value="new">Новые</option>
+                            <option value="answered">С ответом</option>
+                        </select>
+                    </div>
+                   
+                    <div class="reviews-list">
+                        <button class="btn-primary" id="addPromotion"> Добавить ответ на отзыв</button>
+                    </div>
+                    
+                </section>
+
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальные окна -->
+    <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Детали заказа</h2>
+            <div class="order-details" id="orderDetailsContent">
+                <!-- Детали заказа будут загружаться динамически -->
+            </div>
+            <div class="order-actions">
+                <div class="form-group">
+                    <label for="orderComment">Комментарий к заказу</label>
+                    <textarea id="orderComment" placeholder="Добавьте комментарий к заказу"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="orderStatus">Статус заказа</label>
+                    <select id="orderStatus">
+                        <option value="new">Новый</option>
+                        <option value="processing">В обработке</option>
+                        <option value="delivery">Доставка</option>
+                        <option value="completed">Завершен</option>
+                        <option value="cancelled">Отменен</option>
+                    </select>
+                </div>
+                <button class="btn-primary" id="saveOrderChanges">Сохранить изменения</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="promotionModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Добавить/Редактировать акцию</h2>
+            <form id="promotionForm">
+                <div class="form-group">
+                    <label for="promotionTitle">Название акции</label>
+                    <input type="text" id="promotionTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="promotionDescription">Описание</label>
+                    <textarea id="promotionDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="promotionImage">Изображение</label>
+                    <input type="file" id="promotionImage">
+                </div>
+                <div class="form-group">
+                    <label for="promotionStartDate">Дата начала</label>
+                    <input type="date" id="promotionStartDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="promotionEndDate">Дата окончания</label>
+                    <input type="date" id="promotionEndDate" required>
+                </div>
+                <button type="submit" class="btn-primary">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="reviewModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ответ на отзыв</h2>
+            <div class="review-content">
+                <!-- Содержимое отзыва будет загружаться динамически -->
+            </div>
+            <form id="reviewResponseForm">
+                <div class="form-group">
+                    <label for="reviewResponse">Ответ</label>
+                    <textarea id="reviewResponse" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Отправить ответ</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно для блюда -->
+    <div class="modal" id="dishModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Добавить/Редактировать блюдо</h2>
+            <form id="dishForm">
+                <div class="form-group">
+                    <label for="dishName">Название</label>
+                    <input type="text" id="dishName" required>
+                </div>
+                <div class="form-group">
+                    <label for="dishCategory">Категория</label>
+                    <input type="text" id="dishCategory" required>
+                </div>
+                <div class="form-group">
+                    <label for="dishPrice">Цена</label>
+                    <input type="number" id="dishPrice" required>
+                </div>
+                <div class="form-group">
+                    <label for="dishDescription">Описание</label>
+                    <textarea id="dishDescription" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="dishImage">Картинка</label>
+                    <input type="file" id="dishImage">
+                </div>
+                <button type="submit" class="btn-primary">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно для добавления блюда -->
+    <div class="modal" id="addDishModal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" id="closeAddDishModal">&times;</span>
+            <h2>Добавить блюдо</h2>
+            <form id="addDishForm">
+                <div class="form-group">
+                    <label for="dishType">Тип блюда</label>
+                    <select id="dishType" required>
+                        <option value="">Выберите тип</option>
+                        <option value="Основное">Основное</option>
+                        <option value="Суп">Суп</option>
+                        <option value="Десерт">Десерт</option>
+                        <option value="Напиток">Напиток</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dishName">Название блюда</label>
+                    <input type="text" id="dishName" required placeholder="Введите название блюда">
+                </div>
+                <div class="form-group">
+                    <label for="dishPrice">Цена</label>
+                    <input type="number" id="dishPrice" required placeholder="Введите цену">
+                </div>
+                <div class="form-group">
+                    <label for="dishDescription">Краткое описание</label>
+                    <input type="text" id="dishDescription" required placeholder="Введите краткое описание">
+                </div>
+                <div class="form-group">
+                    <label for="dishImage">Картинка</label>
+                    <input type="file" id="dishImage">
+                </div>
+                <div class="form-actions" style="display:flex;justify-content:flex-end;gap:10px;">
+                    <button type="button" class="btn-primary" id="cancelAddDish">Закрыть</button>
+                    <button type="submit" class="btn-primary" style="background:#4CAF50;color:#fff;">Добавить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html> 
